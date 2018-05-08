@@ -1,50 +1,71 @@
-import '../css/app.css';
+import './app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import NavMenu from './Components/NavMenu';
+import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './ContentNav'
 
-import ItemCard from './Components/ItemCard';
+//render((
+  //<BrowserRouter>
+   // <App />
+  //</BrowserRouter>
+//), document.getElementById('root'));
 
-class App extends React.Component {
-  constructor() {
-    super();
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-    this.state = {
-      entries: []
-    };
-  }
+//import ItemCard from './Components/ItemCard';
 
-  componentDidMount() {
-    fetch('/data')
-      .then(response => response.json())
-      .then(entries => {
-        this.setState({
-          entries
-        });
-      });
-  }
+//class App extends React.Component {
+  //constructor() {
+    //super();
 
-  render() {
-    return (
-      <MuiThemeProvider>
-        <div style={{ display: 'flex' }}>
-          {this.state.entries.map(
-            ({ id, author, avatarUrl, title, description }) => (
-              <ItemCard
-                key={id}
-                author={author}
-                title={title}
-                avatarUrl={avatarUrl}
-                style={{ flex: 1, margin: 10 }}
-              >
-                {description}
-              </ItemCard>
-            )
-          )}
-        </div>
-      </MuiThemeProvider>
-    );
-  }
-}
+    //this.state = {
+      //entries: []
+    //};
+  //}
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+
+  //componentDidMount() {
+    //fetch('/data')
+      //.then(response => response.json())
+      //.then(entries => {
+        //this.setState({
+          //entries
+        //});
+      //});
+  //}
+
+  //render() {
+    //return (<div>hello</div>);}
+      //<MuiThemeProvider>
+        //<div style={{ display: 'flex' }}>
+          //{this.state.entries.map(
+            //({ id, author, avatarUrl, title, description }) => (
+              //<ItemCard
+                //key={id}
+                //author={author}
+                //title={title}
+                //avatarUrl={avatarUrl}
+                //style={{ flex: 1, margin: 10 }}
+              //>
+                //{description}
+              //</ItemCard>
+            //)
+         // )}
+        //</div>
+      //</MuiThemeProvider>
+    //);
+  //}
+//}
+
+render((
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+      ), document.getElementById('root'));
