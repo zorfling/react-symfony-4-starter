@@ -13,3 +13,6 @@ framework:
     #fragments: ~
     php_errors:
         log: true
+
+    translator:
+      enabled: false
