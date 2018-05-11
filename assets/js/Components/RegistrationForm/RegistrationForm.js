@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactSignupLoginComponent from 'react-signup-login-component';
+import './registrationForm.css'
  
 const LoginPage = (props) => {
     const signupWasClickedCallback = (data) => {

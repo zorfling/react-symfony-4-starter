@@ -21,9 +21,12 @@
     "mdreact": "^0.1.5",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-avatar": "^2.5.1",
     "react-dom": "^16.2.0",
+    "react-events-calendar": "^1.0.0-beta.3",
     "react-router-dom": "^4.2.2",
     "react-signup-login-component": "^1.0.3",
-    "react-tabs": "^2.2.2"
+    "react-tabs": "^2.2.2",
+    "react-user-avatar": "^1.10.0"
   }
 }

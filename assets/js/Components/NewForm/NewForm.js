@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FormTabs from '../FormTabs/FormTabs';
+import './NewForm.css'
 
 class NewForm extends Component {
     constructor(props) {
@@ -34,19 +35,20 @@ class NewForm extends Component {
   
     render() {
       return (
-          <div>
-            <h1>Erfaringsskema for 4.semester</h1>
+          <div className="container">
+            <b>Erfaringsskema for 4.semester</b>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label for="exampleForm1">
                         Pick a date:
-                        <input type="date" onChange={this.onDateChange} value={this.state.date} />
+                        <input type="date" id="exampleForm1" className="form-control" onChange={this.onDateChange} value={this.state.date} />
                     </label>
-                    <label>
-                        Working hours:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                      <br/>
+                    <label for="exampleForm2">
+                        Working hours:   
                     </label>
-                    <FormTabs />
-                    <button type="button" value="Submit" className="btn btn-success">Submit</button>
+                      <input type="text" id="exampleForm2" className="form-control" value={this.state.value} onChange={this.handleChange} />
+                      <FormTabs />
+                      <button type="button" value="Submit" className="btn btn-success">Submit</button>
                 </form>
         </div>
       );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import FormType1 from '../FormType1/FormType1';
-import FormType2 from '../FormType2/FormType2';
+import FormType1 from '../Forms/FormType1';
+import FormType2 from '../Forms/FormType2';
 
 
 const FormTabs = () => (
@@ -21,9 +21,6 @@ const FormTabs = () => (
     </TabPanel>
     <TabPanel>
       <FormType1 /> 
-    </TabPanel>
-    <TabPanel>
-      <FormType2 />  
     </TabPanel>
   </Tabs>
 );

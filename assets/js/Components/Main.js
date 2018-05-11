@@ -4,13 +4,14 @@ import RegistrationForm from './RegistrationForm/registrationForm';
 import FormTabs from './FormTabs/FormTabs';
 import NewForm from './NewForm/NewForm';
 import Home from './Home/Home';
-import FormType1 from './FormType2/FormType2';
+import Schedule from './Schedule/schedule';
 
 
 const Main = () => (
   <main>
     <Switch>
     <Route exact path='/' component={Home}/>
+    <Route path='/calendar' component={Schedule}/>
     <Route path='/newForm' component={NewForm}/>  
     <Route path='/registrationForm' component={RegistrationForm}/>  
     
