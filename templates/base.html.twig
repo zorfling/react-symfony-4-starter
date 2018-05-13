@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome to React Symfony 4 Starter!{% endblock %}</title>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">n
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-        {% block stylesheets %}
+    {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-        {% endblock %}
-    </head>
-    <body>
-        <header>
-            {% block header %} {% endblock %}
-        </header>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-        <footer class="footer">
-            {% block footer %} {% endblock %}
-        </footer>
-    </body>
+    {% endblock %}
+</head>
+<body>
+<header>
+    {% block header %} {% endblock %}
+
+</header>
+{% include 'flash_messages.html.twig' %}
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+<footer class="footer">
+    {% block footer %} {% endblock %}
+</footer>
+</body>
 </html>

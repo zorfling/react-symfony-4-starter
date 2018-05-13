@@ -9,11 +9,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/default", name="index")
+     * @Route("/", name="index")
      */
     public function indexAction()
     {
-        return $this->render('Default/login.html.twig', []);
+
+        if( $user = $this->getUser() ) {
+            $username = $user->getUsername();
+            return $this->render('Default/index.html.twig', [
+                "username" => $username
+            ]);
+        }
+
+        return $this->render('Default/index.html.twig', []);
     }
 
     /**
