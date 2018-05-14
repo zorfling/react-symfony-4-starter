@@ -13,6 +13,14 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
+        if( $user = $this->getUser() ) {
+            $username = $user->getUsername();
+            return $this->render('Default/index.html.twig', [
+                "username" => $username
+            ]);
+        }
+
         return $this->render('Default/index.html.twig', []);
     }
 

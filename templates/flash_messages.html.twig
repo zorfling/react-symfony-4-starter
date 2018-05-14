@@ -1,0 +1,17 @@
+{% block flash_messages %}
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+
+            <div class="alert alert-{{ type }} alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8 text-center">{{ message | raw }}</div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
