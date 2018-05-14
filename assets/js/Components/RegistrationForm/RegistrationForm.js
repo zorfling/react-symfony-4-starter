@@ -15,13 +15,17 @@ const LoginPage = (props) => {
      
     };
     return (
-        <div>
-            <ReactSignupLoginComponent
-                title="Log in or sign up"
-                handleSignup={signupWasClickedCallback}
-                handleLogin={loginWasClickedCallback}
-                handleRecoverPassword={recoverPasswordWasClickedCallback}
-            />
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-6">
+                    <ReactSignupLoginComponent
+                        title="Log in or sign up"
+                        handleSignup={signupWasClickedCallback}
+                        handleLogin={loginWasClickedCallback}
+                        handleRecoverPassword={recoverPasswordWasClickedCallback}
+                    />
+                </div>
+            </div>
         </div>
     );
 };

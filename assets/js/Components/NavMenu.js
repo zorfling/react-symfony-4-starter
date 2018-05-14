@@ -31,9 +31,6 @@ class NavbarFeatures extends React.Component {
         return (
            
                 <Navbar color="indigo" dark expand="md" scrolling>
-                    <NavbarBrand href="/">
-                        <strong>Midwife Internship</strong>
-                    </NavbarBrand>
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
@@ -41,18 +38,10 @@ class NavbarFeatures extends React.Component {
                               <NavLink to="/">Home</NavLink>
                           </NavItem>
                           <NavItem>
-                              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                              <DropdownToggle nav caret>My Internships</DropdownToggle>
-                              <DropdownMenu>
-                                  <DropdownItem href="#">Internship 1</DropdownItem>
-                                  <DropdownItem href="#">Internship 2</DropdownItem>
-                                  <DropdownItem href="#">Internship 3</DropdownItem>
-                                  <DropdownItem href="#">Internship 4</DropdownItem>
-                              </DropdownMenu>
-                              </Dropdown>
+                              <NavLink to="/schedule">Schedule</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="/calendar">My Schedule</NavLink>
+                              <NavLink to="/progress">Progress</NavLink>
                           </NavItem>
                           <NavItem>
                               <NavLink to="/newForm">Add new form</NavLink>
